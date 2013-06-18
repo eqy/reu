@@ -16,9 +16,11 @@ be an adaptation of these.
 \section{Jargon Cheat-Sheet}
 \begin{itemize}
 \item \textbf{Ablation}: Like resection, but at the surface
+\item \textbf{Cortical Dysplasia}: 
 \item \textbf{Gliosis}: Glial cell hypertrophy
 \item \textbf{Hypovolemia}: Decreased blood volume
 \item \textbf{Ictal}: During a seizure/attack
+\item \textbf{Idiopathic}: Of indeterminate cause
 \item \textbf{Interictal}: Between seizures/attacks
 \item \textbf{Multilayer Perceptron}: Type of Neural Network used in supervised
 \item \textbf{Refractory}: Resisting control, not responding [to medication] 
@@ -26,7 +28,7 @@ be an adaptation of these.
 resection as treatment for epilepsy
 ML\footnote{Wikipedia article on this has a ``factual dispute''... sticking with
 rudimentary description for now}
-\item \textbf{West Syndrom}: Infant eplipsy, often leading to other development
+\item \textbf{West Syndrom}: Infant epilepsy, often leading to other development
 impairments
 \end{itemize}
 
@@ -38,32 +40,59 @@ impairments
 \item \textbf{EEG}: Electroencephalography
 \item \textbf{FDG-PET}: 18F-Fludeoxyglucose Positron Emission Tomography
 \item \textbf{ML}: Machine Learning
-\item \textbf{NNP}: Neurologicaly normal patients
+\item \textbf{NNP}: Neurologically normal patients
 \item \textbf{PWE}: Epileptic seizure patients
 \item \textbf{PWN}: Non-epileptic seizure patients
-\item \textbf{RFTC}: Random field teory correction
+\item \textbf{RFTC}: Random field theory correction
 \item \textbf{ROI}: Region of interest
 \item \textbf{R/LTLE}: Right/Left Temporal Lobe Epilepsy
 \item \textbf{TBI}: Traumatic Brain Injury
 
 \end{itemize}
 
+\section{Concept Jar}
+Concepts floating around...
+
+\textbf{Complexity and EEG:} How many distinct patterns are there in an EEG?
+Fewer number of distinct patterns \ensuremath{\rightarrow} lower complexity.
+(Lempel-Ziv Complexity).
+
+\section{Daunizeau--EEG-fMRI information fusion: biophysics and data analysis}
+Moving from unimodal recordings to multimodal recordings. 
+
+\textbf{Background:}``Cerebral activity has man attributes: bioelectric,
+metabolic, hemodynamic, hormonal, endogenous, exogenous, specialized, integrted,
+pathologic, stable, dynamic, etc.'' 
+
+\begin{itemize}
+\item EEG signals are driven by postsynaptic cortical currents ``associated with
+large pyramidal neurons''
+\end{itemize}
+
+\textbf{Insight}: EEG does not ``specify uniquely the location of underlying
+biolectric activity''
+
 \section{Epilepsy: Common}
 \subsection{Henry--Presurgical epilepsy localization with interictal cerebral
 dysfunction}
 This paper documents a variety of scenarios with respect to ictal, interictal,
-and peri-ictal hypometabolism in TLE patients. 
+and peri-ictal hypometabolism in TLE patients. It also contains a of issues 
+surrounding the localization of abnormalities and cortical resection. These
+scenarios as used to describe the process of using FDG-PET and EEG + MRI to
+localize epileptogenetic areas, determine electrode placement for monitoring
+these areas, and establishing a prognosis for the resection of these areas. 
 
 \textbf{Background}: ``Neuropsychological evaluation is critical to evaluating
-thepotential benefit of epilepsy surgery''
+the potential benefit of epilepsy surgery''
 
+\textbf{Observations}
 \begin{itemize}
-\item ``Bilateral but assymetric temporal lobe hypometabolism can be
+\item ``Bilateral but asymmetric temporal lobe hypometabolism can be
 detected readily with statistical parametric imaging techniques, but usually
 appears only as unilateral temporal hypometabolism on visual interpretation.''
 \item AEDs may uniformly reduce metabolism. 
 \item Higher resolution better detect hypometabolism.
-\item Hypometabolism is diffiuse
+\item Hypometabolism is diffuse
 \item Temporal hypometabolism is usually more severe than extratemporal
 hypometabolism
 \item Hypometabolism changes with time following seizures
@@ -72,10 +101,12 @@ with a higher incidence of postoperative seizures''
 \item Infants suffering from West's syndrome that underwent resection ``often
 had cessation of seizures, and normal or near-normal cognitive development,'' as
 opposed to developing autism
+\item ``Epileptogenetic zone is typically a ... area of cortical dysplasia.'' 
+\item ``Impairments of of verbal fluency are common in epilepsy interictally''
 
 \end{itemize}
 
-\subsection{Kerr--Balancing Clinical and Pathologic Relevence in the Machine Learning
+\subsection{Kerr--Balancing Clinical and Pathologic Relevance in the Machine Learning
 Diagnosis of Epilepsy}
 \textbf{Distinction}: Patients with non-epileptic seizures as control versus
 normal patients as control.
