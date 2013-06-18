@@ -7,12 +7,15 @@
 
 \begin{document}
     \maketitle
-    \url{http://www.github.com/eqy/reu}
+    \begin{center}Epilepsy: \emph{Seize the day} (Moyer 2013)\end{center}
 
+    \url{http://www.github.com/eqy/reu}
+    
     Insights and observations found in papers as well as useful definitions for
     jargon and a cheat-sheet for acronyms. The annotations in the bibliography 
 could be an adaptation of these.
 
+    \tableofcontents
     \section{Jargon Cheat-Sheet}
         \begin{itemize}
             \item \textbf{Ablation}: Like resection, but at the surface
@@ -32,7 +35,7 @@ temporal
             ML\footnote{Wikipedia article on this has a ``factual dispute''...  
 sticking with
             rudimentary description for now}
-            \item \textbf{West Syndrom}: Infant epilepsy, often leading to other 
+            \item \textbf{West Syndrome}: Infant epilepsy, often leading to other 
 development
             impairments
         \end{itemize}
@@ -66,12 +69,51 @@ EEG?
 complexity.
         (Lempel-Ziv Complexity).
 
-   
 
-
-    \section{Clusting}
+    \section{Clustering}
         \subsection{Spectral Clustering Tutorial}
-    \section{Colocalization} 
+        \textbf{Connected}: Any two vertices are joined with a path that doesn't
+include any vertices outside of the set.
+        \textbf{Connected Component}: Connected, no connections between the set and
+its complement. 
+
+        \textbf{Types of similarity graphs}
+        \begin{itemize}
+        \item\ensuremath{\varepsilon}-neighborhood graphs: points with distances
+smaller than \ensuremath{\varepsilon} are connected, unweighted
+        \item\ensuremath{k}-nearest neighbor graphs: connect each point with its
+\ensuremath{k} nearest neighbors (directed graph, unweighted ), though can be
+made undirected by simply ignoring direction or if both points are among the
+\ensuremath{k}-nearest neighbors of each other.
+        \item Fully connected graph: connect all points with positive
+similarity (weighted with similarity)
+        \end{itemize}
+        
+        \textbf{Fine Point}: The degree of a vertex with an \emph{unweighted}
+adjacency matrix is an integer. 
+
+        \textbf{Note}: The unnormalized graph Laplacian
+\ensuremath{L = D - W} does not depend on the diagonal elements of W. Why? Think
+about how \ensuremath{d_{i}} is determined. \ensuremath{D - W} effectively
+subtracts each diagonal element of \ensuremath{W} from itself, as each
+\ensuremath{d_{i}} is a sum that includes \ensuremath{w_{ij}} such that
+\ensuremath{i=j}.  
+        
+        \textbf{Note}: The one's vector is in the nullspace of the Laplacian
+because \ensuremath{L} contains the sum of each row of \ensuremath{W} along its
+diagonal (excluding the diagonal entries of W) and the entries of \ensuremath{W}
+with opposite sign in its remaining entries.
+
+        \textbf{Properties of unnormalized graph laplacians (undirected graph
+with non-negative weights)}
+        \begin{itemize}
+           \item The multiplicity of the eigenvalue 0 of L is the number of
+connected components in the graph. (Realize that connected components means that
+no components are connected to each other!)
+        \end{itemize}
+the indicator vectors        
+        
+\section{Colocalization} 
         \subsection{Daunizeau--EEG-fMRI information fusion: biophysics and data 
     analysis}
             \textbf{Questions:}
@@ -84,7 +126,7 @@ probabilities do the prior probability distribution consider?
             \end{itemize}     
             Moving from unimodal recordings to multimodal recordings. 
 
-            \textbf{Background:}``Cerebral activity has man attributes: bioelectric,
+            \textbf{Background:}``Cerebral activity has many attributes: bioelectric,
             metabolic, hemodynamic, hormonal, endogenous, exogenous, specialized, 
     integrated,
             pathologic, stable, dynamic, etc.'' 
