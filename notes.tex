@@ -6,147 +6,240 @@
 \date{2013/06/17---}
 
 \begin{document}
-\maketitle
-\url{http://www.github.com/eqy/reu}
+    \maketitle
+    \url{http://www.github.com/eqy/reu}
 
-Insights and observations found in papers as well as useful definitions for
-jargon and a cheat-sheet for acronyms. The annotations in the bibliography could
-be an adaptation of these.
+    Insights and observations found in papers as well as useful definitions for
+    jargon and a cheat-sheet for acronyms. The annotations in the bibliography 
+could be an adaptation of these.
 
-\section{Jargon Cheat-Sheet}
-\begin{itemize}
-\item \textbf{Ablation}: Like resection, but at the surface
-\item \textbf{Cortical Dysplasia}: 
-\item \textbf{Gliosis}: Glial cell hypertrophy
-\item \textbf{Hypovolemia}: Decreased blood volume
-\item \textbf{Ictal}: During a seizure/attack
-\item \textbf{Idiopathic}: Of indeterminate cause
-\item \textbf{Interictal}: Between seizures/attacks
-\item \textbf{Multilayer Perceptron}: Type of Neural Network used in supervised
-\item \textbf{Refractory}: Resisting control, not responding [to medication] 
-\item \textbf{Resection}: Removal of a part of an organ e.g. Left temporal
-resection as treatment for epilepsy
-ML\footnote{Wikipedia article on this has a ``factual dispute''... sticking with
-rudimentary description for now}
-\item \textbf{West Syndrom}: Infant epilepsy, often leading to other development
-impairments
-\end{itemize}
+    \section{Jargon Cheat-Sheet}
+        \begin{itemize}
+            \item \textbf{Ablation}: Like resection, but at the surface
+            \item \textbf{Cortical Dysplasia}: \item \textbf{Gliosis}: Glial 
+cell hypertrophy
+            \item \textbf{Hypovolemia}: Decreased blood volume
+            \item \textbf{Ictal}: During a seizure/attack
+            \item \textbf{Idiopathic}: Of indeterminate cause
+            \item \textbf{Interictal}: Between seizures/attacks
+            \item \textbf{Multilayer Perceptron}: Type of Neural Network used in 
+supervised
+            \item \textbf{Prior}: Prior probability distribution
+            \item \textbf{Refractory}: Resisting control, not responding [to 
+medication] \item \textbf{Resection}: Removal of a part of an organ e.g. Left 
+temporal
+            resection as treatment for epilepsy
+            ML\footnote{Wikipedia article on this has a ``factual dispute''...  
+sticking with
+            rudimentary description for now}
+            \item \textbf{West Syndrom}: Infant epilepsy, often leading to other 
+development
+            impairments
+        \end{itemize}
 
-\section{Acronym Cheat-Sheet}
-\begin{itemize}
-\item \textbf{AED}: Antiepileptic drugs
-\item \textbf{CADT}: Computer aided diagnostic tools
-\item \textbf{CL1OCV}: Cyclical leave-one-out cross validation
-\item \textbf{EEG}: Electroencephalography
-\item \textbf{FDG-PET}: 18F-Fludeoxyglucose Positron Emission Tomography
-\item \textbf{ML}: Machine Learning
-\item \textbf{NNP}: Neurologically normal patients
-\item \textbf{PWE}: Epileptic seizure patients
-\item \textbf{PWN}: Non-epileptic seizure patients
-\item \textbf{RFTC}: Random field theory correction
-\item \textbf{ROI}: Region of interest
-\item \textbf{R/LTLE}: Right/Left Temporal Lobe Epilepsy
-\item \textbf{TBI}: Traumatic Brain Injury
+    \section{Acronym Cheat-Sheet}
+        \begin{itemize}
+            \item \textbf{AED}: Antiepileptic drugs
+            \item \textbf{BOLD}: Blood oxygenation level dependent
+            \item \textbf{CADT}: Computer aided diagnostic tools
+            \item \textbf{CL1OCV}: Cyclical leave-one-out cross validation
+            \item \textbf{ECD}: Equivalent current dipole
+            \item \textbf{EEG}: Electroencephalography
+            \item \textbf{FDG-PET}: 18F-Fludeoxyglucose Positron Emission 
+Tomography
+            \item \textbf{ML}: Machine Learning
+            \item \textbf{NNP}: Neurologically normal patients
+            \item \textbf{PWE}: Epileptic seizure patients
+            \item \textbf{PWN}: Non-epileptic seizure patients
+            \item \textbf{RFTC}: Random field theory correction
+            \item \textbf{ROI}: Region of interest
+            \item \textbf{R/LTLE}: Right/Left Temporal Lobe Epilepsy
+            \item \textbf{TBI}: Traumatic Brain Injury
+        \end{itemize}
 
-\end{itemize}
+    \section{Concept Jar}
+        Concepts floating around...
 
-\section{Concept Jar}
-Concepts floating around...
+        \textbf{Complexity and EEG:} How many distinct patterns are there in an 
+EEG?
+        Fewer number of distinct patterns \ensuremath{\rightarrow} lower 
+complexity.
+        (Lempel-Ziv Complexity).
 
-\textbf{Complexity and EEG:} How many distinct patterns are there in an EEG?
-Fewer number of distinct patterns \ensuremath{\rightarrow} lower complexity.
-(Lempel-Ziv Complexity).
-
-\section{Daunizeau--EEG-fMRI information fusion: biophysics and data analysis}
-Moving from unimodal recordings to multimodal recordings. 
-
-\textbf{Background:}``Cerebral activity has man attributes: bioelectric,
-metabolic, hemodynamic, hormonal, endogenous, exogenous, specialized, integrted,
-pathologic, stable, dynamic, etc.'' 
-
-\begin{itemize}
-\item EEG signals are driven by postsynaptic cortical currents ``associated with
-large pyramidal neurons''
-\end{itemize}
-
-\textbf{Insight}: EEG does not ``specify uniquely the location of underlying
-biolectric activity''
-
-\section{Epilepsy: Common}
-\subsection{Henry--Presurgical epilepsy localization with interictal cerebral
-dysfunction}
-This paper documents a variety of scenarios with respect to ictal, interictal,
-and peri-ictal hypometabolism in TLE patients. It also contains a of issues 
-surrounding the localization of abnormalities and cortical resection. These
-scenarios as used to describe the process of using FDG-PET and EEG + MRI to
-localize epileptogenetic areas, determine electrode placement for monitoring
-these areas, and establishing a prognosis for the resection of these areas. 
-
-\textbf{Background}: ``Neuropsychological evaluation is critical to evaluating
-the potential benefit of epilepsy surgery''
-
-\textbf{Observations}
-\begin{itemize}
-\item ``Bilateral but asymmetric temporal lobe hypometabolism can be
-detected readily with statistical parametric imaging techniques, but usually
-appears only as unilateral temporal hypometabolism on visual interpretation.''
-\item AEDs may uniformly reduce metabolism. 
-\item Higher resolution better detect hypometabolism.
-\item Hypometabolism is diffuse
-\item Temporal hypometabolism is usually more severe than extratemporal
-hypometabolism
-\item Hypometabolism changes with time following seizures
-\item ``Symmetric, severe, bilateral temporal hypometabolism also is associated
-with a higher incidence of postoperative seizures''
-\item Infants suffering from West's syndrome that underwent resection ``often
-had cessation of seizures, and normal or near-normal cognitive development,'' as
-opposed to developing autism
-\item ``Epileptogenetic zone is typically a ... area of cortical dysplasia.'' 
-\item ``Impairments of of verbal fluency are common in epilepsy interictally''
-
-\end{itemize}
-
-\subsection{Kerr--Balancing Clinical and Pathologic Relevance in the Machine Learning
-Diagnosis of Epilepsy}
-\textbf{Distinction}: Patients with non-epileptic seizures as control versus
-normal patients as control.
-
-``Non-epileptic seizures are primarily psychiatric events.'' ``...based on
-ruling out all organic causes for the attacks.''
+   
 
 
-Common features of Epilepsy: ``Hypersynchronized activity of neurons, inhibited
-activity in surrounding tissue, focal cortical atrophy, MRI signal
-hyperintensivity, increased cell death of inhibitory cells, ensuing gliosis''
+    \section{Clusting}
+        \subsection{Spectral Clustering Tutorial}
+    \section{Colocalization} 
+        \subsection{Daunizeau--EEG-fMRI information fusion: biophysics and data 
+    analysis}
+            \textbf{Questions:}
+            \begin{itemize}
+                \item How is estimating neuronal activity from hemodynamic
+response a [difficult] temporal deconvolution problem?
+                \item Do spatial priors of fMRI derived activation only consider
+activation and (not) activation as the two possible outcomes? Which
+probabilities do the prior probability distribution consider?
+            \end{itemize}     
+            Moving from unimodal recordings to multimodal recordings. 
 
-\textbf{Insight}: Patients with seizures may recieve antiepileptic drugs that manipulate
-neural networks and therefore EEGs that differences between NNPs and PWEs are
-enhanced.
+            \textbf{Background:}``Cerebral activity has man attributes: bioelectric,
+            metabolic, hemodynamic, hormonal, endogenous, exogenous, specialized, 
+    integrated,
+            pathologic, stable, dynamic, etc.'' 
 
-\textbf{Observation}: PWNs and PWEs may share many common underlying factors: ``PWNs
-model their seizures after those they have seen or heard about...'' and ``both
-PWN and PWE are associated with traumatic brain injury''
+            \begin{itemize}
+                \item EEG signals are driven by postsynaptic cortical currents 
+    ``associated with
+                large pyramidal neurons''
+                \item EEG and fMRI data may be mismatched or ``decoupled''
+(possibly an indication of some pathology)
+                \item Decoupling may be a result of the ``distance between the
+neuronal population... generating the EEG signal and the vascular tree... which
+provides the blood supply to these neurons,'' among other factors
+                \item \textbf{Problem}: Simultaneous EEG/fMRI faces
+challenges--low SNR relative to unimodal collection, artifacts in EEG, etc.
+                \begin{itemize}
+                    \item MRI Scanning 'imaging artifact' (Allen 2000),
+producing time-varying magnetic fields that induce currents (and therefore
+voltages)
+                    \item Cardiac pulsation 'pulse artifact' causing moments in
+the head/electrodes or of the blood, changing the Hall-voltage
+                \end{itemize}
+                \item De-noising algorithms... \footnote{This is looking a lot
+like spike sorting}
+                \item EEG to fMRI approaches (asymmetric)
+                \begin{itemize}
+                    \item ``Localize, using fMRI brain regions whose response is
+temporally correlated with a given EEG-defined event''
+                    \item ``Spontaneous fluctuations of power in specific
+frequency bands are quantified in the EEG traces.''
+                    \item \textbf{Goal}: ``Linear decomposition of fMRI data
+which covaries with a time-frequency decomposition of the EEG''
+                \end{itemize}                    
+                \item fMRI to EEG (asymmetric)
+                \begin{itemize}
+                    \item Use spatial prior probability distributions derived
+from fMRI to solve the EEG source reconstruction problem\footnote{Does this
+assume that fMRI and EEG are strongly coupled?}      
+                \end{itemize}
+                \item \textbf{Problem}: EEG and fMRI may differ in obtained
+localization, so how are the relative importance or weighting of EEG/fMRI
+determined?
+            \end{itemize}
 
-\textbf{Insight}: Comparison between PWN and PWE models the comparison physicians
-perform--that is, if a patient suffers from seizures, is this seizure epileptic
-or non-epileptic? This contrasts with trying to determine whether a patient is
-epileptic regardless of whether the patient suffers from seizures.
+            \textbf{Insight}: EEG does not ``specify uniquely the location of 
+    underlying
+            biolectric activity''
 
-\textbf{Methodology}: Multilayer Perceptron used to ``discriminate between either PWN or
-NNP versuses RTLE or LTLE''. \textbf{minimum redundancy-maximum relvancy mRMR of
-MATLAB}.
+    \section{Epilepsy: Common}
+        \subsection{Henry--Presurgical epilepsy localization with interictal 
+cerebral
+        dysfunction}
+        This paper documents a variety of scenarios with respect to ictal, 
+interictal,
+        and peri-ictal hypometabolism in TLE patients. It also contains a of 
+issues surrounding the localization of abnormalities and cortical resection. 
+These
+        scenarios as used to describe the process of using FDG-PET and EEG + MRI 
+to
+        localize epileptogenetic areas, determine electrode placement for 
+monitoring
+        these areas, and establishing a prognosis for the resection of these 
+areas. 
 
-\textbf{Observation}: Each binary comparison e.g. LTLE vs. PWN, LTLE vs. NNP, RTLE vs.
-NNP, etc. often corresponds to differing ROIs. Even LTLE vs. PWN and LTLE vs.
-NNP have differences--PWN and NNP differ from LTLE differently!
+        \textbf{Background}: ``Neuropsychological evaluation is critical to 
+evaluating
+        the potential benefit of epilepsy surgery''
 
-\textbf{Observation}: Despite the differences in ROIs for different control
-groups, the ability to diagnose LTLE/RTLE remained similar. Therefore,
-comparing PWEs to NNPs does \textbf{not} artificially increase discriminative
-ability!
+        \textbf{Observations}
+        \begin{itemize}
+            \item ``Bilateral but asymmetric temporal lobe hypometabolism can be
+            detected readily with statistical parametric imaging techniques, but 
+usually
+            appears only as unilateral temporal hypometabolism on visual 
+interpretation.''
+            \item AEDs may uniformly reduce metabolism.  \item Higher resolution 
+better detect hypometabolism.
+            \item Hypometabolism is diffuse
+            \item Temporal hypometabolism is usually more severe than 
+extratemporal
+            hypometabolism
+            \item Hypometabolism changes with time following seizures
+            \item ``Symmetric, severe, bilateral temporal hypometabolism also is 
+associated
+            with a higher incidence of postoperative seizures''
+            \item Infants suffering from West's syndrome that underwent 
+resection ``often
+            had cessation of seizures, and normal or near-normal cognitive 
+development,'' as
+            opposed to developing autism
+            \item ``Epileptogenetic zone is typically a ... area of cortical 
+dysplasia.'' \item ``Impairments of of verbal fluency are common in epilepsy 
+interictally''
+        \end{itemize}
 
-\textbf{Take Home}: Let the clinical question determine the control group, and
-the question may be a ``pathologic description of disorders'' or the
-``development of clinically applicable tools.''  
+    \subsection{Kerr--Balancing Clinical and Pathologic Relevance in the Machine 
+Learning
+    Diagnosis of Epilepsy}
+        \textbf{Distinction}: Patients with non-epileptic seizures as control 
+versus
+        normal patients as control.
+
+        ``Non-epileptic seizures are primarily psychiatric events.'' ``...based 
+on
+        ruling out all organic causes for the attacks.''
+
+
+        Common features of Epilepsy: ``Hypersynchronized activity of neurons, 
+inhibited
+        activity in surrounding tissue, focal cortical atrophy, MRI signal
+        hyperintensivity, increased cell death of inhibitory cells, ensuing 
+gliosis''
+
+        \textbf{Insight}: Patients with seizures may recieve antiepileptic drugs 
+that manipulate
+        neural networks and therefore EEGs that differences between NNPs and 
+PWEs are
+        enhanced.
+
+        \textbf{Observation}: PWNs and PWEs may share many common underlying 
+factors: ``PWNs
+        model their seizures after those they have seen or heard about...'' and 
+``both
+        PWN and PWE are associated with traumatic brain injury''
+
+        \textbf{Insight}: Comparison between PWN and PWE models the comparison 
+physicians
+        perform--that is, if a patient suffers from seizures, is this seizure 
+epileptic
+        or non-epileptic? This contrasts with trying to determine whether a 
+patient is
+        epileptic regardless of whether the patient suffers from seizures.
+
+        \textbf{Methodology}: Multilayer Perceptron used to ``discriminate 
+between either PWN or
+        NNP versuses RTLE or LTLE''. \textbf{minimum redundancy-maximum relvancy 
+mRMR of
+        MATLAB}.
+
+        \textbf{Observation}: Each binary comparison e.g. LTLE vs. PWN, LTLE vs. 
+NNP, RTLE vs.
+        NNP, etc. often corresponds to differing ROIs. Even LTLE vs. PWN and 
+LTLE vs.
+        NNP have differences--PWN and NNP differ from LTLE differently!
+
+        \textbf{Observation}: Despite the differences in ROIs for different 
+control
+        groups, the ability to diagnose LTLE/RTLE remained similar. Therefore,
+        comparing PWEs to NNPs does \textbf{not} artificially increase 
+discriminative
+        ability!
+
+        \textbf{Take Home}: Let the clinical question determine the control 
+group, and
+        the question may be a ``pathologic description of disorders'' or the
+        ``development of clinically applicable tools.''  
 
 \end{document}
