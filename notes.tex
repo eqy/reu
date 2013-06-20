@@ -1,7 +1,8 @@
 \documentclass{article}
 \usepackage{fullpage}
 \usepackage{hyperref}
-
+\usepackage{ulem}
+\usepackage{mathtools}
 \title{\vspace{-3ex}notes}
 \date{2013/06/17---}
 
@@ -50,6 +51,7 @@ development
             \item \textbf{EEG}: Electroencephalography
             \item \textbf{FDG-PET}: 18F-Fludeoxyglucose Positron Emission 
 Tomography
+            \item \textbf{IID}: Independently and Identically Distributed
             \item \textbf{ML}: Machine Learning
             \item \textbf{NNP}: Neurologically normal patients
             \item \textbf{PWE}: Epileptic seizure patients
@@ -69,15 +71,23 @@ EEG?
 complexity.
         (Lempel-Ziv Complexity).
 
-
     \section{Clustering}
-        \subsection{Spectral Clustering Tutorial}
+        \subsection{Spectral Clustering Tutorial}   
+        \begin{itemize}
+            \item \textbf{\ensuremath{L}}: Graph Laplacian
+            \item \textbf{\ensuremath{D}}: Degree Matrix
+            \item \textbf{\ensuremath{W}}: Weighted/Unweighted Adjacency Matrix
+        \end{itemize}
         \textbf{Connected}: Any two vertices are joined with a path that doesn't
 include any vertices outside of the set.
         \textbf{Connected Component}: Connected, no connections between the set and
 its complement. 
 
-        \textbf{Types of similarity graphs}
+        \textbf{Indicator Vector}: For a component \ensuremath{A}, the indicator
+vector \ensuremath{\vec{1}_{A}} has a one in the \ensuremath{i}th entry if
+\ensuremath{A} contains the \ensuremath{i}th vertex, and a zero otherwise.
+    
+        \subsubsection{Types of similarity graphs}
         \begin{itemize}
         \item\ensuremath{\varepsilon}-neighborhood graphs: points with distances
 smaller than \ensuremath{\varepsilon} are connected, unweighted
@@ -88,7 +98,7 @@ made undirected by simply ignoring direction or if both points are among the
         \item Fully connected graph: connect all points with positive
 similarity (weighted with similarity)
         \end{itemize}
-        
+        \subsubsection{Observations} 
         \textbf{Fine Point}: The degree of a vertex with an \emph{unweighted}
 adjacency matrix is an integer. 
 
@@ -102,17 +112,101 @@ subtracts each diagonal element of \ensuremath{W} from itself, as each
         \textbf{Note}: The one's vector is in the nullspace of the Laplacian
 because \ensuremath{L} contains the sum of each row of \ensuremath{W} along its
 diagonal (excluding the diagonal entries of W) and the entries of \ensuremath{W}
-with opposite sign in its remaining entries.
+with opposite sign in its remaining entries (adding these together gives zero).
+Why? Think about what happens when you subtract \ensuremath{W} from
+\ensuremath{D} and what the diagonal entires of L become as a result.
 
         \textbf{Properties of unnormalized graph laplacians (undirected graph
 with non-negative weights)}
         \begin{itemize}
            \item The multiplicity of the eigenvalue 0 of L is the number of
-connected components in the graph. (Realize that connected components means that
-no components are connected to each other!)
+connected components in the graph. (Realize that by the definition of connected
+components means that
+no connected components are connected to each other!)
+            \item Write a graph Laplacian of \ensuremath{k} connected components
+in a block diagonal form, such that each block corresponds to a connected
+component. Then each connected component's block matrix contributes an
+eigenvalue \ensuremath{0} with its indicator vector as the corresponding
+eigenvector.
         \end{itemize}
-the indicator vectors        
-        
+        \textbf{Normalized graph laplacians}
+        \begin{itemize}
+        \item Why is \ensuremath{0} an eigenvalue of \ensuremath{L_{rw}}
+with \ensuremath{\vec{1}} as the eigenvector? Realize that \ensuremath{L_{rw}}
+is obtained by \ensuremath{D^{-1}L} and therefore \ensuremath{\vec{1}} remains
+in the kernel of \ensuremath{L_{rw}}
+        \item \ensuremath{u=D^{-1/2}w \rightarrow w = D^{1/2}u}
+        \end{itemize} 
+
+        \subsubsection{Primer on \ensuremath{k}-nearest neighbors}
+        The \ensuremath{k}-nearest neighbor algorithm is used at the end of many
+spectral clustering algorithms. What does it do? It partitions a set of points
+into \ensuremath{k} clusters.
+        How does it do it?
+        \begin{enumerate}
+        \item Choose \ensuremath{k}-random points from the domain of [data] points
+as initial means 
+        \item Assign each point to its nearest mean, forming \ensuremath{k}
+clusters
+        \item Re-determine each mean by taking the mean of each cluster,
+reassign points to clusters based on the new means
+        \item Repeat until the clusters converge
+        \end{enumerate}
+    
+        \subsubsection{Those Fancy Plots in MATLAB}
+            \begin{itemize}
+                \item The first two rows correspond to a 10-nearest neighbor
+graph and the bottom rows a fully connected graph--hence the differences in
+indicator vectors. This also implies that bottom two rows have an eigenvalue
+\ensuremath{0} of multiplicity \ensuremath{1}.
+                \item Realize that only eigenvectors with corresponding
+eigenvalue \ensuremath{0} are indicator vectors
+                \item The aberrations of slope of the indicator vectors are a
+result of MATLAB's \sout{creative interpolation} disgusting default behavior
+                \item Do not be disturbed by the scaling of the indicator vectors
+            \end{itemize}
+
+        \subsubsection{Approximating RatioCut}
+            \begin{math}\text{cut}(|A|,|\overline{A}|)\left(\frac{|\overline{A}|+|A|}
+{|A|}+\frac{|A|+|\overline{A}|}{|\overline{A}|}\right)=\left(A+|\overline{A}|\right)
+\text{cut}(|A|,|\overline{A}|)\left(\frac{1}{|A|}+\frac{1}{|\overline{A}|}\right)
+=|V|\cdot \text{RatioCut}(A, \overline{A}) 
+            \end{math}
+
+            \textbf{Conditions for arbitrary \ensuremath{k}} 
+            \begin{itemize}
+                \item Problem: min \ensuremath{\text{Tr}(H'LH)}
+                \item \ensuremath{H'H = I}
+                \item \begin{math}
+                    h_{i,j}= \left\{
+                    \begin{array}{lr}
+                        \frac{1}{\sqrt{|A_j|}}&\text{if } v_i \in A_j\\
+                        0&\text{otherwise}
+                    \end{array}\right.
+            \end{math}
+            \end{itemize}
+        \subsubsection{Approximating Ncut}
+            
+            \textbf{Conditions}
+            \begin{itemize}            
+                \item Problem: minimize \ensuremath{\text{Tr}(T'D^{-1/2}LD^{-1}T)}
+                \item \ensuremath{T'T = I}
+                \item \ensuremath{T=D^{1/2}H}
+                \item \begin{math}
+                        h_{i,j} = \left\{
+                            \begin{array}{lr}
+                            \frac{1}{\sqrt{\text{vol}(A_j)}}&\text{if } v_i \in    
+A_j\\
+                            0&\text{otherwise}
+                            \end{array}\right. 
+                \end{math}
+            \end{itemize}
+
+        \subsubsection{Other Considerations}
+             \begin{itemize}
+                    \item \textbf{Eigengap}: \ensuremath{\gamma_k =
+|\lambda_k-\lambda_{k+1}|}
+             \end{itemize}
 \section{Colocalization} 
         \subsection{Daunizeau--EEG-fMRI information fusion: biophysics and data 
     analysis}
