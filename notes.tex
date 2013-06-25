@@ -27,7 +27,9 @@ cell hypertrophy
             \item \textbf{Idiopathic}: Of indeterminate cause
             \item \textbf{Interictal}: Between seizures/attacks
             \item \textbf{Multilayer Perceptron}: Type of Neural Network used in 
-supervised
+supervised machine learning
+            \item \textbf{Montreal Neurological Institute Brain/Template}: A
+sort of canonical brain atlas/map?
             \item \textbf{Prior}: Prior probability distribution
             \item \textbf{Refractory}: Resisting control, not responding [to 
 medication] \item \textbf{Resection}: Removal of a part of an organ e.g. Left 
@@ -36,6 +38,7 @@ temporal
             ML\footnote{Wikipedia article on this has a ``factual dispute''...  
 sticking with
             rudimentary description for now}
+            \item \textbf{Sclerosis}: Hardening of tissue
             \item \textbf{West Syndrome}: Infant epilepsy, often leading to other 
 development
             impairments
@@ -53,12 +56,17 @@ development
 Tomography
             \item \textbf{IID}: Independently and Identically Distributed
             \item \textbf{ML}: Machine Learning
+            \item \textbf{MNI brain/template/space}:Montreal Neurological
+Institute
+            \item \textbf{mTLE}: Mesial Temporal Lobe Epilepsy
             \item \textbf{NNP}: Neurologically normal patients
             \item \textbf{PWE}: Epileptic seizure patients
             \item \textbf{PWN}: Non-epileptic seizure patients
             \item \textbf{RFTC}: Random field theory correction
+            \item \textbf{R/L/-HS}: Right/Left/Unilateral Hippocampal Sclerosis
             \item \textbf{ROI}: Region of interest
             \item \textbf{R/LTLE}: Right/Left Temporal Lobe Epilepsy
+            \item \textbf{SOZ}: Seizure onset zone
             \item \textbf{TBI}: Traumatic Brain Injury
         \end{itemize}
 
@@ -70,8 +78,47 @@ EEG?
         Fewer number of distinct patterns \ensuremath{\rightarrow} lower 
 complexity.
         (Lempel-Ziv Complexity).
+        \textbf{Motion Amplification????????????}
+    \section{Filtering}
+        \begin{math}
+            E = ||\hat{I} + \hat{I}_0||^2 +\alpha||\bigtriangledown\hat{I}||^2 
+            \rightarrow ||\hat{I} - \hat{I}_0||^2 +\alpha||i\omega\hat{I}||^2
+        \end{math}
 
+        \textbf{TODO}: Fourier transform in two dimensions 
+        \subsection{Example Functions}
+        \begin{itemize}
+        \item \texttt{imread()}
+        \item \texttt{meshgrid()}
+        \item \texttt{fftshift()}: Center frequencies at 0
+         
+        \end{itemize} 
+        
     \section{Clustering}
+        \subsection{LOO Cross Validation}
+        \begin{itemize}
+        \item \textbf{Leave-one-out cross validation}: Cycle through data using all
+points except one as training and the remaining point as validator--for all
+combinations of points
+
+        \end{itemize}
+        \subsection{Support Vector Machines}
+        \begin{itemize}
+            \item Good for binary decision making
+            \item Segregate classes of training data with a hyperplane
+            \item Can use a linear classifier or nonlinear classifier    
+            \item Describe a hyperplane as \ensuremath{\mathbf{w_0}\cdot\mathbf{z} +
+b_0 = 0}
+        
+            \begin{itemize}
+                \item where \begin{math}\sum_{support vectors}{\alpha_i\mathbf{z_i}}
+\end{math}
+                \item and the decision function is \begin{math}I(\mathbf{z}) =
+\text{sign}\left(\sum_{support vectors}{\alpha_i\mathbf{z_i}\cdot\mathbf{z}+
+b_0}\right) \end{math}
+            \end{itemize}
+        \end{itemize} 
+
         \subsection{Spectral Clustering Tutorial}   
         \begin{itemize}
             \item \textbf{\ensuremath{L}}: Graph Laplacian
@@ -86,7 +133,6 @@ its complement.
         \textbf{Indicator Vector}: For a component \ensuremath{A}, the indicator
 vector \ensuremath{\vec{1}_{A}} has a one in the \ensuremath{i}th entry if
 \ensuremath{A} contains the \ensuremath{i}th vertex, and a zero otherwise.
-    
         \subsubsection{Types of similarity graphs}
         \begin{itemize}
         \item\ensuremath{\varepsilon}-neighborhood graphs: points with distances
@@ -206,8 +252,24 @@ A_j\\
              \begin{itemize}
                     \item \textbf{Eigengap}: \ensuremath{\gamma_k =
 |\lambda_k-\lambda_{k+1}|}
+                    \item Random walks--commute distance: \ensuremath{ c_{ij} =
+\text{vol}(V) (e_i - e_j)' L^{\dagger} (e_i - e_j)}
              \end{itemize}
-\section{Colocalization} 
+        \subsubsection{Practical Details}
+              Possible to choose Gaussian/other similarity function--use fully
+connected resulting graph, or break up using
+\ensuremath{\varepsilon}-neighborhood graphs or  
+        \subsection{Automated MR image classification in temporal lobe
+epilepsy--Focke}
+            \textbf{Focus}: Accurately classifying underlying structural
+pathology
+            \begin{itemize}
+                \item ``Images were segmented into the three main tissue classes
+(gray matter, white matter, and CSf)''
+                \item Images ``were spatially normalized''--how is this done??
+            \end{itemize}     
+                
+    \section{Colocalization} 
         \subsection{Daunizeau--EEG-fMRI information fusion: biophysics and data 
     analysis}
             \textbf{Questions:}
@@ -378,4 +440,13 @@ group, and
         the question may be a ``pathologic description of disorders'' or the
         ``development of clinically applicable tools.''  
 
+        \subsection{Kerr--Computer-aided diagnosis and localization of
+lateralized temporal lobe epilepsy using interictal FDG=PET}
+        \begin{itemize}
+            \item Goal: \textbf{CAD} tool to assist in the diagnosis of epilepsy        
+            \item ``Combines clinical information, manual interpretation as well
+as automated analysis'' 
+            \item Interictal \textbf{FDG-PET} and \textbf{sMRI},
+\textbf{diffusion MRI} and \textbf{EEG}
+        \end{itemize}
 \end{document}
