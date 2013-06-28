@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: annobib.aux
+The style file: annotate.bst
+Database file #1: annobib.bib
+You've used 19 entries,
+            2588 wiz_defined-function locations,
+            707 strings with 20728 characters,
+and the built_in function-call counts, 9089 in all, are:
+= -- 864
+> -- 545
+< -- 6
++ -- 200
+- -- 196
+* -- 758
+:= -- 1525
+add.period$ -- 60
+call.type$ -- 19
+change.case$ -- 152
+chr.to.int$ -- 19
+cite$ -- 19
+duplicate$ -- 303
+empty$ -- 596
+format.name$ -- 210
+if$ -- 1818
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 19
+newline$ -- 115
+num.names$ -- 57
+pop$ -- 125
+preamble$ -- 1
+purify$ -- 171
+quote$ -- 0
+skip$ -- 256
+stack$ -- 0
+substring$ -- 482
+swap$ -- 48
+text.length$ -- 6
+text.prefix$ -- 1
+top$ -- 0
+type$ -- 148
+warning$ -- 0
+while$ -- 73
+width$ -- 25
+write$ -- 271
