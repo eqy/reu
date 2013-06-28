@@ -18,17 +18,17 @@ clustering.  If the $i$th row vector was assigned to the $j$th cluster, then the
 $i$th vertex in the training set is assigned to some $j$th cluster of vertices.
 
 Temporal lobe epilepsy is characterized by newly-presented hypometabolic
-features
-in some region of the brain. Spectral clustering could be applied to the
-diagnostic problem by identifying the patient as having a specific class of
-epilepsy (bilateral, LTE, RTE, unlateralized) based on which ROI has experienced
-the hypometabolism.
+features in some region of the brain. Spectral clustering could be applied to
+the diagnostic problem by identifying the patient as having a specific class of
+epilepsy (bilateral, \ac{ltle}, \ac{rtle}, unlateralized) based on which ROI has
+experienced the hypometabolism.
 
-Toward the fMRI/EEG fusion problem: after transforming EEG spectral bands onto
-fMRI voxel space, different spectral bands (either single or multiple bands at a
-time) could be clustered with fMRI signal. In this scheme the spectral band data
-and fMRI data would be vertices on a graph that is weighted based on temporal
-proximity, similarity in signal strength, or another factor.} 
+Toward the \ac{fmri}/\ac{eeg} fusion problem: after transforming \ac{eeg}
+spectral bands onto \ac{fmri} voxel space, different spectral bands (either single or
+multiple bands at a time) could be clustered with \ac{fmri} signal. In this
+scheme the spectral band data and \ac{fmri} data would be vertices on a graph
+that is weighted based on temporal proximity, similarity in signal strength, or
+another factor.} 
 }
 
 @article{
@@ -40,10 +40,10 @@ title="Computer-aided diagnosis and localization of lateralized temporal lobe
 epilepsy using interictal {FDG-PET}",
 journal="Frontiers in Neurology", 
 year="2013",
-annotate="Kerr et al. focus on the problem of identifying (lateralizing) RTLE
-and LTLE using a CAD tool. The model used involved
-partitioning FDG-PET data into 47 ROIs and incorporating the metabolic activity
-of each ROI in training a MLP evaluated with CL1OCV."
+annotate="Kerr et al. focus on the problem of diagnosing \ac{pwe} verus \ac{pwn}
+using a \ac{cad} tool. The model used involved
+partitioning \ac{fdgpet} data into 47 \ac{roi} and incorporating the metabolic activity
+of each \ac{roi} in training a \ac{mlp} evaluated with \ac{cl10cv}."
 }
 
 @INPROCEEDINGS{
@@ -54,14 +54,14 @@ A. and Silverman, D.H. and Cohen, M.S.},
 title={Balancing clinical and pathological relevance in machine learning
 diagnosis of epilepsy},
 booktitle={3rd International Workshop Pattern Recognition in Neuron Aging},
-address={Philadelphia, PN, USA},
+address={Philadelphia, PA, USA},
 year={2013},
 annotate={[Filler citation for now--likely contains errors.] It is important to
 consider when evaluating machine learning used in the diagnosis of epilepsy the
-control group--whether the comparison group is normal or PWN. Kerr et al.
+control group--whether the comparison group is normal or \ac{pwn}. Kerr et al.
 argue that because the clinical question in epilepsy diagnosis is whether
-patients are PWE or PWN given that seizures are already present, the
-control group should be PWN. That is, the clinical comparison is between
+patients are \ac{pwe} or \ac{pwn} given that seizures are already present, the
+control group should be \ac{pwn}. That is, the clinical comparison is between
 patients with epileptic seizures and those with non-epileptic seizures, not
 between patients with epileptic seizures and those whom not present seizures.}
 }
@@ -84,11 +84,10 @@ keywords = "Positron emission tomography",
 keywords = "Neuropsychology",
 keywords = "Neuropsychometry ",
 annotate = {Accurate localization is crucial to the success of resection aimed
-towards curing TLE. FDG-PET is valuable in planning resection surgery and 
-predicting surgical outcomes. 
-Different types of epilepsy can characterized by the
-apparent hypometabolism observed in regions such as the mesial and lateral 
-temporal lobe.}
+towards curing \ac{tle}. \ac{fdgpet} is valuable in planning resection surgery
+and predicting surgical outcomes.  Different types of epilepsy can characterized
+by the apparent hypometabolism observed in regions such as the mesial and
+lateral temporal lobe.}
 }
 
 @INPROCEEDINGS{Cortes95support-vectornetworks,
@@ -112,7 +111,7 @@ Ademoglu, A.},
 booktitle={Telecommunications and Signal Processing (TSP), 2012 35th
 International Conference on}, 
 title={Functional parcellation of memory related brain networks by spectral
-clustering of EEG data}, 
+clustering of \ac{eeg} data}, 
 year={2012}, 
 pages={581-585}, 
 keywords={electroencephalography;medical signal
@@ -128,7 +127,7 @@ algorithms;Electrodes;Electroencephalography;Mathematical model;Mutual
 information;Time frequency analysis;EEG;Memory Load;Mutual
 Information;Normalized Cut;Working Memory}, 
 doi={10.1109/TSP.2012.6256363},
-annotate = {Aydin et al. investigated the relationship between alpha-band EEG
+annotate = {Aydin et al. investigated the relationship between alpha-band \ac{eeg}
 activity and memory function. Clustering, both group and individual wise, was
 used to classify electrodes for the visuospatial tasks.}
 }
@@ -172,16 +171,16 @@ pages = {542-550},
 year = {2012}, 
 doi = {10.1148/radiol.12112638},
 annotate = {The detection of hippocampal atrophies in epilepsy patients is
-crucial in lateralization of Temporal Lobe Epilepsy (TLE). However, slight
-atrophies present early in the disease may be difficult to identify, even by
-expert radiologists. Farid et al., implement fully automated volumetric MRI in
-an attempt to correctly lateralize TLE in their patients. Volumetric analysis
-can confirm hippocampal cell loss, and thus is a strong indicator of the
-presence and degree of hippocampal atrophy. Individual patient's brain scans
-were normalized with respect to age and sex, and then compared to appropriate
-norms in order to determine if atrophy was present. Although this volumetric
-approach was successful in determining the presence and laterality of these
-atrophies, it is best used as an aid to visual analysis. }
+crucial in lateralization of \ac{tle}. However, slight atrophies present early
+in the disease may be difficult to identify, even by expert radiologists. Farid
+et al., implement fully automated volumetric \ac{mri} in an attempt to correctly
+lateralize \ac{tle} in their patients. Volumetric analysis can confirm
+hippocampal cell loss, and thus is a strong indicator of the presence and degree
+of hippocampal atrophy. Individual patient's brain scans were normalized with
+respect to age and sex, and then compared to appropriate norms in order to
+determine if atrophy was present. Although this volumetric approach was
+successful in determining the presence and laterality of these atrophies, it is
+best used as an aid to visual analysis. }
 }
 
 @article{Focke2012356,
@@ -191,7 +190,7 @@ volume = "59",
 number = "1",
 pages = "356 - 362",
 year = "2012",
-note = "<ce:title>Neuroergonomics: The human brain in action and at work</ce:title> ",
+note = "Neuroergonomics: The human brain in action and at work",
 issn = "1053-8119",
 doi = "http://dx.doi.org/10.1016/j.neuroimage.2011.07.068",
 url = "http://www.sciencedirect.com/science/article/pii/S1053811911008639",
@@ -201,17 +200,16 @@ keywords = "Support vector machine",
 keywords = "Temporal lobe epilepsy",
 keywords = "\{DTI\}",
 keywords = "\{T2\} relaxometry ",
-annotate = {Support vector machines can be used to classify between left mesial
-temporal lobe epilepsy (mTLE), right mTLE, and the control group (no unilateral
-mTLE), with or without marked hippocampal sclerosis (HS). The
-classification/diagnosis was particularly accurate when gray matter based
-segmentation and diffusion tensor imaging (DTI) were implemented. When dealing
-with mTLE, it can be beneficial to use local weighting.}
+annotate = {Support vector machines can be used to classify between left
+\ac{mtle}, right \ac{mtle}, and the control group (no unilateral \ac{mtle}),
+with or without marked \ac{hs}. The classification/diagnosis was particularly
+accurate when gray matter based segmentation and \ac{dti} were implemented. When
+dealing with \ac{mtle}, it can be beneficial to use local weighting.}
 }
 
 
 @article{Mantini2007598,
-title = "Complete artifact removal for \{EEG\} recorded during continuous fMRI using independent component analysis ",
+title = "Complete artifact removal for \{EEG\} recorded during continuous \ac{fmri} using independent component analysis ",
 journal = "NeuroImage ",
 volume = "34",
 number = "2",
@@ -227,12 +225,12 @@ keywords = "Functional magnetic resonance imaging",
 keywords = "Independent component analysis",
 keywords = "Artifact removal",
 keywords = "Event-related potentials ",
-annotate = {Simultaneous recording of EEG and fMRI data is useful in combining
-the strengths of both procedures. However, EEG recordings made in the MRI become
-contaminated by both physiological and environmental disturbances in the MRI
-environment. Mantini et al. propose a method of using ICA to
+annotate = {Simultaneous recording of \ac{eeg} and \ac{fmri} data is useful in combining
+the strengths of both procedures. However, \ac{eeg} recordings made in the \ac{mri} become
+contaminated by both physiological and environmental disturbances in the \ac{mri}
+environment. Mantini et al. propose a method of using \ac{ica} to
 remove ballistocardiographic (BCG) and ocular artifacts along with contamination
-due to MRI from the data. The source signals were separated into brain signals
+due to \ac{mri} from the data. The source signals were separated into brain signals
 and artifacts through manual and automated classification, and artifacts were
 subtracted from the data. In doing so, desired signals were recovered and noise
 free data was reconstructed to be used for later clinical study.}
@@ -286,7 +284,7 @@ Organization = {{Int Pharmaco EEG Grp; Almirall Prodesfarma SA; Astra Zeneca; Bi
 ISSN = {{0379-0355}},
 ResearcherID-Numbers = {{Pascual-Marqui, Roberto/A-2012-2008}},
 Unique-ID = {{ISI:000180426300003}},
-annotate={[Not 100\% citation]sLORETA is a technique for transforming the EEG
+annotate={[Not 100\% citation]sLORETA is a technique for transforming the \ac{eeg}
 recordings from spatially diffuse electrode space into MR voxel space. It is
 currently the best solution to the inverse problem for finding the exact sources
 of neural activity as it is instantaneous, distributed, discreate and linear. It
@@ -296,7 +294,7 @@ cortex.  Importantly, sLORETA computes with a zero localization error.}
 
 article {HBM:HBM20723,
 author = {Marques, José P. and Rebola, José and Figueiredo, Patrícia and Pinto, Alda and Sales, Francisco and Castelo-Branco, Miguel},
-title = {ICA decomposition of EEG signal for fMRI processing in epilepsy},
+title = {\ac{ica} decomposition of \ac{eeg} signal for \ac{fmri} processing in epilepsy},
 journal = {Human Brain Mapping},
 volume = {30},
 number = {9},
@@ -319,12 +317,12 @@ annotate = {NUKED}
     volume = {13},
     pages = {411--430},
     annotate = {Hyvärinen and Oja give an overview of Independent Component
-Analysis (ICA) and its implementation in recovering individual data samples from
+Analysis (\ac{ica}) and its implementation in recovering individual data samples from
 multivariate data. This separation of data is achieved through application
 dependent preprocessing of the data, such as centering and whitening and
 utilizing an algorithm that maximizes the contrast function of components. The
-application of ICA becomes useful in the separation of individual brain activity
-components from measured potentials in EEG, the separation of brain activity
+application of \ac{ica} becomes useful in the separation of individual brain activity
+components from measured potentials in \ac{eeg}, the separation of brain activity
 from artifacts in the data (eye movements or blinks, or malfunctions in
 sensors), and also in the denoising of images.} 
 }
@@ -405,7 +403,7 @@ solution vector.}
 }
 
 article{Daunizeau200769,
-title = "Symmetrical event-related EEG/fMRI information fusion in a variational Bayesian framework ",
+title = "Symmetrical event-related EEG/\ac{fmri} information fusion in a variational Bayesian framework ",
 journal = "NeuroImage ",
 volume = "36",
 number = "1",
@@ -422,7 +420,7 @@ annotate = {NUKED}
 }
 
 article{Horovitz20041587,
-title = "Parametric design and correlational analyses help integrating fMRI and electrophysiological data during face processing ",
+title = "Parametric design and correlational analyses help integrating \ac{fmri} and electrophysiological data during face processing ",
 journal = "NeuroImage ",
 volume = "22",
 number = "4",
@@ -465,7 +463,7 @@ Abstract = {{This paper reviews several recent publications that have successful
    digitized Talairach atlas provided by the Brain Imaging Centre, Montreal
    Neurological Institute. The combination of these methodological
    developments has placed LORETA at a level that compares favorably to the
-   more classical functional imaging methods, such as PET and fMRI. (C)
+   more classical functional imaging methods, such as PET and \ac{fmri}. (C)
    2002 Prous Science. All rights reserved.}},
 Publisher = {{PROUS SCIENCE, SA}},
 Address = {{PO BOX 540, PROVENZA 388, 08025 BARCELONA, SPAIN}},
@@ -489,7 +487,7 @@ annotate = {NUKED}
 }
 
 article{Luessi2011113,
-title = "Bayesian symmetrical EEG/fMRI fusion with spatially adaptive priors ",
+title = "Bayesian symmetrical EEG/\ac{fmri} fusion with spatially adaptive priors ",
 journal = "NeuroImage ",
 volume = "55",
 number = "1",
@@ -509,7 +507,7 @@ annotate = {NUKED}
 }
 
 article{Mulert200483,
-title = "Integration of fMRI and simultaneous EEG: towards a comprehensive understanding of localization and time-course of brain activity in target detection ",
+title = "Integration of \ac{fmri} and simultaneous EEG: towards a comprehensive understanding of localization and time-course of brain activity in target detection ",
 journal = "NeuroImage ",
 volume = "22",
 number = "1",
@@ -531,7 +529,7 @@ annotate = {NUKED}
 }
 
 article{Ritter2006823,
-title = "Simultaneous EEG–fMRI ",
+title = "Simultaneous EEG–\ac{fmri} ",
 journal = "Neuroscience \& Biobehavioral Reviews ",
 volume = "30",
 number = "6",
@@ -542,7 +540,7 @@ issn = "0149-7634",
 doi = "http://dx.doi.org/10.1016/j.neubiorev.2006.06.008",
 url = "http://www.sciencedirect.com/science/article/pii/S0149763406000534",
 author = "Petra Ritter and Arno Villringer",
-keywords = "Simultaneous EEG-fMRI",
+keywords = "Simultaneous EEG-\ac{fmri}",
 keywords = "Background rhythms",
 keywords = "Evoked responses",
 keywords = "\{BOLD\} signal",
@@ -552,7 +550,7 @@ annotate = {NUKED}
 }
 
 article{Lu2006238,
-title = "Using voxel-specific hemodynamic response function in EEG-fMRI data analysis ",
+title = "Using voxel-specific hemodynamic response function in EEG-\ac{fmri} data analysis ",
 journal = "NeuroImage ",
 volume = "32",
 number = "1",
@@ -563,7 +561,7 @@ issn = "1053-8119",
 doi = "http://dx.doi.org/10.1016/j.neuroimage.2005.11.040",
 url = "http://www.sciencedirect.com/science/article/pii/S1053811905024985",
 author = "Yingli Lu and Andrew P. Bagshaw and Christophe Grova and Eliane Kobayashi and François Dubeau and Jean Gotman",
-keywords = "fMRI",
+keywords = "\ac{fmri}",
 keywords = "Hemodynamic response function",
 keywords = "Gamma",
 keywords = "Glover",
@@ -582,16 +580,16 @@ annotate = {Annotations go here.}
   year={2010},
   publisher={Springer Berlin Heidelberg},
   annotate={This chapter presents a discussion of various techniques for
-integrating EEG and fMRI information. The goal is to formulate an accurate
-representation of brain activity with the spatial density of fMRI and temporal
-density of EEG. Asymmetrical approaches use one form of data as a predictor for
-details of the other form, for example EEG and its temporal density (resp. fMRI
-and its spatial density) as a predictor for temporal details of fMRI (resp.
-spatial details of EEG). These models assume a strong level of truth to the
+integrating \ac{eeg} and \ac{fmri} information. The goal is to formulate an accurate
+representation of brain activity with the spatial density of \ac{fmri} and temporal
+density of \ac{eeg}. Asymmetrical approaches use one form of data as a predictor for
+details of the other form, for example \ac{eeg} and its temporal density (resp. \ac{fmri}
+and its spatial density) as a predictor for temporal details of \ac{fmri} (resp.
+spatial details of \ac{eeg}). These models assume a strong level of truth to the
 predictor data. Symmetrical approaches, information fusion, equally weight the
 different types of data and attempt to identify complementary features. The goal
-of these techniques is to invert the data, taking EEG (resp. fMRI) from
-[scalp-measured voltage] (resp. BOLD signal) to underlying neural activity.}
+of these techniques is to invert the data, taking \ac{eeg} (resp. \ac{fmri}) from
+[scalp-measured voltage] (resp. \ac{bold} signal) to underlying neural activity.}
 }
 
 @techreport{pcatut,
@@ -613,7 +611,7 @@ reduce the redundancy of the data.}
 }
 
 @article{Engell20122600,
-title = "The fMRI \{BOLD\} signal tracks electrophysiological spectral perturbations, not event-related potentials ",
+title = "The \ac{fmri} \{\ac{bold}\} signal tracks electrophysiological spectral perturbations, not event-related potentials ",
 journal = "NeuroImage ",
 volume = "59",
 number = "3",
@@ -630,12 +628,12 @@ keywords = "\{ERP\}",
 keywords = "Gamma",
 keywords = "Hemodynamic ",
 annotate = {Varying the duration of an external stimulus application results in
-a modulation of $\gamma$-ERSP power that is similar to modulation of the BOLD
+a modulation of $\gamma$-\ac{ersp} power that is similar to modulation of the \ac{bold}
 response in certain regions of the brain (peri-calcarine cortex, fusiform gyrus,
-and lateral-temporal-occipital cortex). Lower-frequency ERSP power is not
-modulated to the same extent as are the $\gamma$-ERSP power and the BOLD signal.
-This observation suggests that the change in BOLD signal could be indicative of
-a corresponding change in $\gamma$-ERSP power.
+and lateral-temporal-occipital cortex). Lower-frequency \ac{ersp} power is not
+modulated to the same extent as are the $\gamma$-\ac{ersp} power and the \ac{bold} signal.
+This observation suggests that the change in \ac{bold} signal could be indicative of
+a corresponding change in $\gamma$-\ac{ersp} power.
 
 The methods used (wavelet decomposition with a sliding window over time) are
 relatively novel and may have yielded better temporal resolution than previous
@@ -647,7 +645,7 @@ increased sensitivity to high-frequency signals.
 }
 
 @article{Bridwell2013101,
-title = "The spatiospectral characterization of brain networks: Fusing concurrent \{EEG\} spectra and fMRI maps ",
+title = "The spatiospectral characterization of brain networks: Fusing concurrent \{\ac{eeg}\} spectra and \ac{fmri} maps ",
 journal = "NeuroImage ",
 volume = "69",
 number = "0",
@@ -662,14 +660,14 @@ keywords = "EEG–fMRI",
 keywords = "\{ICA\}",
 keywords = "Intrinsic connectivity networks",
 keywords = "Deconvolution ",
-annotate = {Birdwell et al. applied group ICA separately to EEG spectral signals
-and fMRI BOLD signals, acquired simultaneously. Selected components of the ICA
-were deconvolved together to estimate an Impulse Response Function (IRF) for
-component pairs of each fMRI and EEG components. This method treats the fMRI
-component time-course as the result of the convolution of the EEG component
-time-course and the IRF. The deviations in the IRF are indicative of EEG
-responses being associated with subsequent fMRI BOLD signal. These results were
-analyzed for similarities in associations in each of the different frequencies,
-observing positive associations between EEG and fMRI in lower and upper
-frequencies and negative associations in various alpha sources.}
+annotate = {Birdwell et al. applied group \ac{ica} separately to \ac{eeg} spectral
+signals and \ac{fmri} \ac{bold} signals, acquired simultaneously. Selected components of
+the \ac{ica} were deconvolved together to estimate an \ac{irf}
+for component pairs of each \ac{fmri} and \ac{eeg} components. This method treats the
+\ac{fmri} component time-course as the result of the convolution of the \ac{eeg}
+component time-course and the \ac{irf}. The deviations in the \ac{irf} are indicative of
+\ac{eeg} responses being associated with subsequent \ac{fmri} \ac{bold} signal. These
+results were analyzed for similarities in associations in each of the different
+frequencies, observing positive associations between \ac{eeg} and \ac{fmri} in lower
+and upper frequencies and negative associations in various alpha sources.}
 }
