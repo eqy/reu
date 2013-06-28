@@ -6,7 +6,29 @@
   year      = {2007},
   ee        = {http://arxiv.org/abs/0711.0189},
   bibsource = {DBLP, http://dblp.uni-trier.de},
-  annotate  = {This space reserved for Kathryn.}
+  annotate  = {Spectral clustering first involves the establishment of a graph
+and definition of a pairwise vertex similarity metric.  A graph type
+($\epsilon$-neighborhood, $k$-nearest and mutual $k$-nearest neighborhood,
+fully-connected) must be specified.  The type of Laplacian (normalized
+random-walk, normalized symmetric, or unnormalized) should be chosen, and the
+Laplacian matrix computed.  A matrix should be created with columns consisting
+of the $k$ smallest eigenvectors of the Laplacian matrix.  The row vectors of
+this new matrix should be partitioned into $k$ classes, via $k$-means
+clustering.  If the $i$th row vector was assigned to the $j$th cluster, then the
+$i$th vertex in the training set is assigned to some $j$th cluster of vertices.
+
+Temporal lobe epilepsy is characterized by newly-presented hypometabolic
+features
+in some region of the brain. Spectral clustering could be applied to the
+diagnostic problem by identifying the patient as having a specific class of
+epilepsy (bilateral, LTE, RTE, unlateralized) based on which ROI has experienced
+the hypometabolism.
+
+Toward the fMRI/EEG fusion problem: after transforming EEG spectral bands onto
+fMRI voxel space, different spectral bands (either single or multiple bands at a
+time) could be clustered with fMRI signal. In this scheme the spectral band data
+and fMRI data would be vertices on a graph that is weighted based on temporal
+proximity, similarity in signal strength, or another factor.} 
 }
 
 @article{
@@ -18,7 +40,7 @@ title="Computer-aided diagnosis and localization of lateralized temporal lobe
 epilepsy using interictal {FDG-PET}",
 journal="Frontiers in Neurology", 
 year="2013",
-annotate="This article focuses on the problem of identifying (lateralizing) RTLE
+annotate="Kerr et al. focus on the problem of identifying (lateralizing) RTLE
 and LTLE using a CAD tool. The model used involved
 partitioning FDG-PET data into 47 ROIs and incorporating the metabolic activity
 of each ROI in training a MLP evaluated with CL1OCV."
@@ -36,10 +58,10 @@ address={Philadelphia, PN, USA},
 year={2013},
 annotate={[Filler citation for now--likely contains errors.] It is important to
 consider when evaluating machine learning used in the diagnosis of epilepsy the
-control group--that is, the comparison group that is non-epileptic. Kerr et al.
+control group--whether the comparison group is normal or PWN. Kerr et al.
 argue that because the clinical question in epilepsy diagnosis is whether
 patients are PWE or PWN given that seizures are already present, the
-control groulp should be PWN. That is, the clinical comparison is between
+control group should be PWN. That is, the clinical comparison is between
 patients with epileptic seizures and those with non-epileptic seizures, not
 between patients with epileptic seizures and those whom not present seizures.}
 }
@@ -75,7 +97,13 @@ temporal lobe.}
     booktitle = {Machine Learning},
     year = {1995},
     pages = {273--297},
-    annotate = {Annotations go here.}
+    annotate = {Support vector networks are a method of classifying data based
+on clustering of training data--requires a grand truth as well as binary outcomes. 
+The support-vector machine relies on the support vectors given by the training
+data to determine an optimal hyperplane to separate the clusters. Larger margins
+usually lead to fewer errors in classification. If the data set is not
+separable, the kernel trick can be used to convert the problem into a
+comparable, although higher-dimensional, separable problem.} 
 }
 
 @INPROCEEDINGS{6256363, 
@@ -100,10 +128,10 @@ algorithms;Electrodes;Electroencephalography;Mathematical model;Mutual
 information;Time frequency analysis;EEG;Memory Load;Mutual
 Information;Normalized Cut;Working Memory}, 
 doi={10.1109/TSP.2012.6256363},
-annotate = {Annotations go here.}
+annotate = {}
 }
 
-@article {INSR:INSR039_2,
+article {INSR:INSR039_2,
 author = {Hand, David J.},
 title = {Data Clustering: Theory, Algorithms, and Applications by Guojun Gan, Chaoqun Ma, Jianhong Wu},
 journal = {International Statistical Review},
@@ -118,7 +146,7 @@ year = {2008},
 annotate = {Annotations go here.}
 }
 
-@ARTICLE{10.3389/fnsys.2012.00059,
+ARTICLE{10.3389/fnsys.2012.00059,
 AUTHOR={Colby, John B and Rudie, Jeffrey D and Brown, Jesse A and Douglas, Pamela K and Cohen, Mark S and Shehzad, Zarrar},
 TITLE={Insights into multimodal imaging classification of ADHD},
 JOURNAL={Frontiers in Systems Neuroscience},
@@ -161,7 +189,12 @@ keywords = "Support vector machine",
 keywords = "Temporal lobe epilepsy",
 keywords = "\{DTI\}",
 keywords = "\{T2\} relaxometry ",
-annotate = {Annotations go here.}
+annotate = {Support vector machines can be used to classify between left mesial
+temporal lobe epilepsy (mTLE), right mTLE, and the control group (no unilateral
+mTLE), with or without marked hippocampal sclerosis (HS). The
+classification/diagnosis was particularly accurate when gray matter based
+segmentation and diffusion tensor imaging (DTI) were implemented. When dealing
+with mTLE, it can be beneficial to use local weighting.}
 }
 
 
@@ -182,18 +215,25 @@ keywords = "Functional magnetic resonance imaging",
 keywords = "Independent component analysis",
 keywords = "Artifact removal",
 keywords = "Event-related potentials ",
-annotate = {Annotations go here.}
+annotate = {Simultaneous recording of EEG and fMRI data is useful in combining
+the strengths of both procedures. However, EEG recordings made in the MRI become
+contaminated by both physiological and environmental disturbances in the MRI
+environment. Mantini et al. propose a method of using ICA to
+remove ballistocardiographic (BCG) and ocular artifacts along with contamination
+due to MRI from the data. The source signals were separated into brain signals
+and artifacts through manual and automated classification, and artifacts were
+subtracted from the data. In doing so, desired signals were recovered and noise
+free data was reconstructed to be used for later clinical study.}
 }
 
-@INPROCEEDINGS{1227396, 
-author={Ding, C. and Peng, H.}, 
+INPROCEEDINGS{1227396, author={Ding, C. and Peng, H.}, 
 booktitle={Bioinformatics Conference, 2003. CSB 2003. Proceedings of the 2003 IEEE}, 
 title={Minimum redundancy feature selection from microarray gene expression data}, 
 year={2003}, 
 pages={523-528}, 
 keywords={arrays;feature extraction;genetics;redundancy;microarray gene expression data;minimum redundancy - maximum relevance framework;minimum redundancy feature selection;phenotypes;spectrum characteristic;Bioinformatics;Cancer;Diseases;Filters;Gene expression;Laboratories;Learning systems;Proteins;Robustness;Testing}, 
 doi={10.1109/CSB.2003.1227396},
-annotate = {Annotations go here.}
+annotate = {}
 }
 
 @ARTICLE{1453511, 
@@ -207,11 +247,42 @@ pages={1226-1238},
 keywords={feature extraction;pattern classification;statistical analysis;arrhythmia;cancer cell lines;first-order incremental feature selection;handwritten digits;linear discriminate analysis;lymphoma tissues;maximal statistical dependency criterion;minimal-redundancy-maximal-relevance criterion;mutual information criteria;naive Bayes;pattern classification systems;support vector machine;Algorithm design and analysis;Cancer;Costs;Diversity reception;Mutual information;Pattern classification;Performance analysis;Redundancy;Support vector machine classification;Support vector machines;Index Terms- Feature selection;classification.;maximal dependency;maximal relevance;minimal redundancy;mutual information;Algorithms;Artificial Intelligence;Cluster Analysis;Computer Simulation;Diagnosis, Computer-Assisted;Humans;Information Storage and Retrieval;Models, Statistical;Neoplasms;Numerical Analysis, Computer-Assisted;Pattern Recognition, Automated}, 
 doi={10.1109/TPAMI.2005.159}, 
 ISSN={0162-8828},
-annotate={Annotations go here.}
+annotate={Peng et al. present a method for efficiently selecting the most
+important factors in a dataset after distinct classes (clusters) have been
+distingushed. They present the Max-Relevance, Min-Redundancy criteria
+(\emph{mRMR}), based on the principle of mutual information for bivariate joint
+probability density functions. This process is presented in contrasted to the
+Max-Dependency criteria, which requires joint probability functions of higher
+dimensions (these are characterized as ill-posed problems).}
 }
 
 
-@article {HBM:HBM20723,
+@article{ ISI:000180426300003,
+Author = {Pascual-Marqui, RD},
+Title = {{Standardized low-resolution brain electromagnetic tomography (sLORETA):
+   Technical details}},
+Journal = {{METHODS AND FINDINGS IN EXPERIMENTAL AND CLINICAL PHARMACOLOGY}},
+Year = {{2002}},
+Volume = {{24}},
+Number = {{D}},
+Pages = {{5-12}},
+Note = {{12th Meeting of the International-Pharmaco-EEG-Group, BARCELONA, SPAIN,
+   NOV 21-24, 2002}},
+Organization = {{Int Pharmaco EEG Grp; Almirall Prodesfarma SA; Astra Zeneca; Bionic
+   Iberica SA; Grupo Ferrer; Grupo Uriach; Labs Dr Esteve; Labs SALVAT;
+   Lilly SA; Menarini; Pfizer SA; Piere Fabre Iberica SA; Vita Invest SA}},
+ISSN = {{0379-0355}},
+ResearcherID-Numbers = {{Pascual-Marqui, Roberto/A-2012-2008}},
+Unique-ID = {{ISI:000180426300003}},
+annotate={[Not 100\% citation]sLORETA is a technique for transforming the EEG
+recordings from spatially diffuse electrode space into MR voxel space. It is
+currently the best solution to the inverse problem for finding the exact sources
+of neural activity as it is instantaneous, distributed, discreate and linear. It
+is also accurate for localizing electrode readings whose sources are deep in the
+cortex.  Importantly, sLORETA computes with a zero localization error.}
+}
+
+article {HBM:HBM20723,
 author = {Marques, José P. and Rebola, José and Figueiredo, Patrícia and Pinto, Alda and Sales, Francisco and Castelo-Branco, Miguel},
 title = {ICA decomposition of EEG signal for fMRI processing in epilepsy},
 journal = {Human Brain Mapping},
@@ -235,7 +306,15 @@ annotate = {NUKED}
     year = {2000},
     volume = {13},
     pages = {411--430},
-    annotate = {Annotations go here.}
+    annotate = {Hyvärinen and Oja give an overview of Independent Component
+Analysis (ICA) and its implementation in recovering individual data samples from
+multivariate data. This separation of data is achieved through application
+dependent preprocessing of the data, such as centering and whitening and
+utilizing an algorithm that maximizes the contrast function of components. The
+application of ICA becomes useful in the separation of individual brain activity
+components from measured potentials in EEG, the separation of brain activity
+from artifacts in the data (eye movements or blinks, or malfunctions in
+sensors), and also in the denoising of images.} 
 }
 
 @INPROCEEDINGS{Lee00algorithmsfor,
@@ -245,10 +324,15 @@ annotate = {NUKED}
     year = {2000},
     pages = {556--562},
     publisher = {MIT Press},
-    annotate = {Annotations go here.}
+    annotate = {Many data classification techniques rely on matrix
+factorizations. When the data set at hand is guaranteed to be nonnegative (i.e.
+the physical measurements only take on nonnegative values) the nonnegative
+matrix factorization (NMF) method may be useful.  NMF is an alternative strategy
+to using SVD or PCA. This paper examines different techniques which can be used
+to compute the NMF which will approximate a general nonnegative matrix.}
 }
 
-@article{10.1371/journal.pone.0033096,
+article{10.1371/journal.pone.0033096,
 author = {Keihaninejad, , Shiva AND Heckemann, , Rolf A. AND Gousias, , Ioannis S. AND Hajnal, , Joseph V. AND Duncan, , John S. AND Aljabar, , Paul AND Rueckert, , Daniel AND Hammers, , Alexander},
 journal = {PLoS ONE},
 publisher = {Public Library of Science},
@@ -258,7 +342,7 @@ month = {04},
 volume = {7},
 url = {http://dx.doi.org/10.1371%2Fjournal.pone.0033096},
 pages = {e33096},
-annoatate={Annotations go here.}
+annotate={NUKED}
 }
 
 
@@ -273,7 +357,15 @@ pages={567-570},
 keywords={approximation theory;estimation theory;image classification;probability;Bayes error;clustering;discriminant analysis;error rate degradation;nonparametric classifiers;pattern classification;training samples;weighted Parzen windows;Degradation;Density functional theory;Entropy;Error analysis;Kernel;Monitoring;Pattern analysis;Pattern classification;Pattern recognition;Training data}, 
 doi={10.1109/34.494647}, 
 ISSN={0162-8828},
-annotate={Annotations go here.}
+annotate={Parzen windows are nonparametric classifiers that estimate a density
+function for data provided, as many data sets do not follow common
+distributions. Babich and Camps approach this by clustering training data to
+find the centers (reference vectors) and weights (window weights) to be used in
+a kernel estimator.   This method makes use of a Parzen Window classifier
+estimation during training so long as these estimates do not exceed a certain
+distance from each other. Overall, this weighted Parzen-window classifier is
+less computational, requires less room, and has little error difference from the
+full classifier.}
 }
 
 @ARTICLE{2013arXiv1302.2717B,
@@ -289,29 +381,18 @@ archivePrefix = "arXiv",
     month = feb,
    adsurl = {http://adsabs.harvard.edu/abs/2013arXiv1302.2717B},
   adsnote = {Provided by the SAO/NASA Astrophysics Data System},
-  annotate = {Annotations go here.}
+  annotate = {This article proposes a new method of Total Variation (TV)
+Clustering. Bresson et al. offer a novel method of choosing an adaptive
+tolerance such that the convergence of the relaxed Balance Cut Problem (BCP) to
+a solution vector is monotonic. Monotonicity of convergence is desirable because
+it leads to a more efficient, more direct convergence. The relaxed BCP is a
+minimization problem whose objective function uses a TV norm to measure each
+iteration of the minimization. A threshold must first be defined, and then all
+points can then be clustered into the two classes by reading indices from the
+solution vector.}
 }
 
-@article{Bridwell2013101,
-title = "The spatiospectral characterization of brain networks: Fusing concurrent \{EEG\} spectra and fMRI maps ",
-journal = "NeuroImage ",
-volume = "69",
-number = "0",
-pages = "101 - 111",
-year = "2013",
-note = "",
-issn = "1053-8119",
-doi = "http://dx.doi.org/10.1016/j.neuroimage.2012.12.024",
-url = "http://www.sciencedirect.com/science/article/pii/S1053811912012098",
-author = "David A. Bridwell and Lei Wu and Tom Eichele and Vince D. Calhoun",
-keywords = "EEG–fMRI",
-keywords = "\{ICA\}",
-keywords = "Intrinsic connectivity networks",
-keywords = "Deconvolution ",
-annotate = {Annotations go here.}
-}
-
-@article{Daunizeau200769,
+article{Daunizeau200769,
 title = "Symmetrical event-related EEG/fMRI information fusion in a variational Bayesian framework ",
 journal = "NeuroImage ",
 volume = "36",
@@ -325,10 +406,10 @@ url = "http://www.sciencedirect.com/science/article/pii/S1053811907000067",
 author = "Jean Daunizeau and Christophe Grova and Guillaume Marrelec and Jérémie
 Mattout and Saad Jbabdi and Mélanie Pélégrini-Issac and Jean-Marc Lina and Habib
 Benali" ,
-annotate = {Annotations go here.}
+annotate = {NUKED}
 }
 
-@article{Horovitz20041587,
+article{Horovitz20041587,
 title = "Parametric design and correlational analyses help integrating fMRI and electrophysiological data during face processing ",
 journal = "NeuroImage ",
 volume = "22",
@@ -343,10 +424,10 @@ author = "Silvina G Horovitz and Bruno Rossion and Pawel Skudlarski and John C G
 keywords = "Face perception",
 keywords = "fMRI",
 keywords = "\{ERP\} ",
-annotate = "Annotations go here."
+annotate = "NUKED"
 }
 
-@article{ ISI:000179909600012,
+article{ ISI:000179909600012,
 Author = {Pascual-Marqui, RD and Esslen, M and Kochi, K and Lehmann, D},
 Title = {{Functional imaging with low-resolution brain electromagnetic tomography
    (LORETA): A review}},
@@ -368,7 +449,7 @@ Abstract = {{This paper reviews several recent publications that have successful
    neuronal activity. In 1998, a series of papers appeared that based
    localization inference on the statistical parametric mapping methodology
    applied to high-time resolution LORETA images. Starting in 1999,
-   quantitative neuroanotomy was added to the methodology based oil the
+   quantitative neuroanatomy was added to the methodology based oil the
    digitized Talairach atlas provided by the Brain Imaging Centre, Montreal
    Neurological Institute. The combination of these methodological
    developments has placed LORETA at a level that compares favorably to the
@@ -392,10 +473,10 @@ Times-Cited = {{227}},
 Journal-ISO = {{Methods Find. Exp. Clin. Pharmacol.}},
 Doc-Delivery-Number = {{627BY}},
 Unique-ID = {{ISI:000179909600012}},
-Annote = {Annotations go here.}
+annotate = {NUKED}
 }
 
-@article{Luessi2011113,
+article{Luessi2011113,
 title = "Bayesian symmetrical EEG/fMRI fusion with spatially adaptive priors ",
 journal = "NeuroImage ",
 volume = "55",
@@ -412,10 +493,10 @@ keywords = "M/EEG source localization",
 keywords = "Spatial adaptivity",
 keywords = "Total variation",
 keywords = "Variational Bayes ",
-annote = {Annotations go here.}
+annotate = {NUKED}
 }
 
-@article{Mulert200483,
+article{Mulert200483,
 title = "Integration of fMRI and simultaneous EEG: towards a comprehensive understanding of localization and time-course of brain activity in target detection ",
 journal = "NeuroImage ",
 volume = "22",
@@ -434,10 +515,10 @@ keywords = "\{P300\}",
 keywords = "Auditory-evoked potential",
 keywords = "Target detection",
 keywords = "Oddball ",
-annote = {Annotations go here.}
+annotate = {NUKED}
 }
 
-@article{Ritter2006823,
+article{Ritter2006823,
 title = "Simultaneous EEG–fMRI ",
 journal = "Neuroscience \& Biobehavioral Reviews ",
 volume = "30",
@@ -455,10 +536,10 @@ keywords = "Evoked responses",
 keywords = "\{BOLD\} signal",
 keywords = "EEG-signatures",
 keywords = "Neurovascular coupling ",
-annote = {Annotations go here.}
+annotate = {NUKED}
 }
 
-@article{Lu2006238,
+article{Lu2006238,
 title = "Using voxel-specific hemodynamic response function in EEG-fMRI data analysis ",
 journal = "NeuroImage ",
 volume = "32",
@@ -479,3 +560,104 @@ keywords = "Deconvolution ",
 annotate = {Annotations go here.}
 }
 
+
+@book{mulert2010eeg,
+  title={Eeg - Fmri: Physiological Basis, Technique, and Applications},
+  author={Mulert, C. and Lemieux, L.},
+  isbn={9783540879190},
+  lccn={2009926259},
+  url={http://books.google.com/books?id=1UOiD94HdXkC},
+  year={2010},
+  publisher={Springer Berlin Heidelberg},
+  annotate={This chapter presents a discussion of various techniques for
+integrating EEG and fMRI information. The goal is to formulate an accurate
+representation of brain activity with the spatial density of fMRI and temporal
+density of EEG. Asymmetrical approaches use one form of data as a predictor for
+details of the other form, for example EEG and its temporal density (resp. fMRI
+and its spatial density) as a predictor for temporal details of fMRI (resp.
+spatial details of EEG). These models assume a strong level of truth to the
+predictor data. Symmetrical approaches, information fusion, equally weight the
+different types of data and attempt to identify complementary features. The goal
+of these techniques is to invert the data, taking EEG (resp. fMRI) from
+[scalp-measured voltage] (resp. BOLD signal) to underlying neural activity.}
+}
+
+@techreport{pcatut,
+  title={A TUTORIAL ON PRINCIPAL COMPONENT ANALYSIS DERIVATION, DISCUSSION AND
+SINGULAR VALUE DECOMPOSITION},
+  author={Shlens, John},
+  year={2003},
+  institution={University of California San Diego},
+  month={March},
+  annotate={Principal component analysis provides a method for reducing the
+dimensionality of data--or more importantly, reducing redundancy and noise. It
+is derived from the assumption that noise and redundant data will typically
+exhibit low variance, whereas the principal components will exhibit higher
+variance. It is proven that given a few additional assumptions, the principal
+components can be obtained from the original data by applying a linear
+transformation to the original data. This linear transform is obtained from the
+assumption that we wish to diagonalize the covariance matrix--and therefore
+reduce the redundancy of the data.}
+}
+
+@article{Engell20122600,
+title = "The fMRI \{BOLD\} signal tracks electrophysiological spectral perturbations, not event-related potentials ",
+journal = "NeuroImage ",
+volume = "59",
+number = "3",
+pages = "2600 - 2606",
+year = "2012",
+note = "",
+issn = "1053-8119",
+doi = "http://dx.doi.org/10.1016/j.neuroimage.2011.08.079",
+url = "http://www.sciencedirect.com/science/article/pii/S1053811911010111",
+author = "Andrew D. Engell and Scott Huettel and Gregory McCarthy",
+keywords = "\{EEG\}",
+keywords = "\{ECoG\}",
+keywords = "\{ERP\}",
+keywords = "Gamma",
+keywords = "Hemodynamic ",
+annotate = {Varying the duration of an external stimulus application results in
+a modulation of $\gamma$-ERSP power that is similar to modulation of the BOLD
+response in certain regions of the brain (peri-calcarine cortex, fusiform gyrus,
+and lateral-temporal-occipital cortex). Lower-frequency ERSP power is not
+modulated to the same extent as are the $\gamma$-ERSP power and the BOLD signal.
+This observation suggests that the change in BOLD signal could be indicative of
+a corresponding change in $\gamma$-ERSP power.
+
+The methods used (wavelet decomposition with a sliding window over time) are
+relatively novel and may have yielded better temporal resolution than previous
+work. This improvement in resolution may have allowed for detection of more
+minute, temporary changes than was possible in earlier studies. Further, the
+inclusion of frequencies larger than 45 Hz into the $\gamma$-band allows for
+increased sensitivity to high-frequency signals.
+}
+}
+
+@article{Bridwell2013101,
+title = "The spatiospectral characterization of brain networks: Fusing concurrent \{EEG\} spectra and fMRI maps ",
+journal = "NeuroImage ",
+volume = "69",
+number = "0",
+pages = "101 - 111",
+year = "2013",
+note = "",
+issn = "1053-8119",
+doi = "http://dx.doi.org/10.1016/j.neuroimage.2012.12.024",
+url = "http://www.sciencedirect.com/science/article/pii/S1053811912012098",
+author = "David A. Bridwell and Lei Wu and Tom Eichele and Vince D. Calhoun",
+keywords = "EEG–fMRI",
+keywords = "\{ICA\}",
+keywords = "Intrinsic connectivity networks",
+keywords = "Deconvolution ",
+annotate = {Birdwell et al. applied group ICA separately to EEG spectral signals
+and fMRI BOLD signals, acquired simultaneously. Selected components of the ICA
+were deconvolved together to estimate an Impulse Response Function (IRF) for
+component pairs of each fMRI and EEG components. This method treats the fMRI
+component time-course as the result of the convolution of the EEG component
+time-course and the IRF. The deviations in the IRF are indicative of EEG
+responses being associated with subsequent fMRI BOLD signal. These results were
+analyzed for similarities in associations in each of the different frequencies,
+observing positive associations between EEG and fMRI in lower and upper
+frequencies and negative associations in various alpha sources.}
+}
